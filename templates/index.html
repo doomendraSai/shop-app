@@ -1,40 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <title>My Shop</title>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;My Shop&lt;/title&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h1&gt;My Shop Products&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;a href="/cart"&gt;🛒 Go to Cart&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">{% for product in products %}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="border:1px solid black; padding:10px; margin:10px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;{{ product.name }}&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;₹{{ product.price }}&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="/add/{{ product.id }}"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button&gt;Add to Cart&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">{% endfor %}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<h1>My Shop Products</h1>
+
+<a href="/cart">🛒 Go to Cart</a>
+
+{% for product in products %}
+
+<div style="border:1px solid black;padding:10px;margin:10px;">
+
+<h3>{{ product.name }}</h3>
+
+<p>₹{{ product.price }}</p>
+
+<a href="/add/{{ product.id }}">
+<button>Add to Cart</button>
+</a>
+
+</div>
+
+{% endfor %}
+
 </body>
 </html>
